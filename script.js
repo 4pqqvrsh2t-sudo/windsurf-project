@@ -45,36 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
     carouselContainer.addEventListener('mouseleave', startCarousel);
 });
 
-// Pull-up functionality
-const pullupArrow = document.getElementById('pullup-arrow');
-const pullupContent = document.getElementById('pullup-content');
-const heroPullup = document.getElementById('hero-pullup');
-const imageCarousel = document.querySelector('.image-carousel');
-let isPullupOpen = false;
-
-pullupArrow.addEventListener('click', () => {
-    isPullupOpen = !isPullupOpen;
-    
-    if (isPullupOpen) {
-        pullupContent.classList.add('active');
-        pullupArrow.classList.add('active');
-        heroPullup.style.transform = 'translateY(-300px)';
-        imageCarousel.classList.add('hidden'); // Hide images when mission is up
-    } else {
-        pullupContent.classList.remove('active');
-        pullupArrow.classList.remove('active');
-        heroPullup.style.transform = 'translateY(0)';
-        imageCarousel.classList.remove('hidden'); // Show images when mission is down
-    }
-});
-
-// Show arrow when scrolled to top
-window.addEventListener('scroll', () => {
-    if (window.scrollY < 50 && !isPullupOpen) {
-        pullupArrow.style.opacity = '1';
-    } else {
-        pullupArrow.style.opacity = '0';
-    }
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 });
 
 // Donation Impact Calculator
