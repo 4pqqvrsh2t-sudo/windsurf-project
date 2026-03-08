@@ -155,7 +155,7 @@ body {
 }
 
 .slide-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -185,7 +185,7 @@ body {
 
 /* Hero Pull-up Section */
 .hero-pullup {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
