@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAction - Help the Environment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>EcoAction</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#donate" class="nav-link">Donate</a></li>
+                    <li><a href="#plants" class="nav-link">Native Plants</a></li>
+                    <li><a href="#resources" class="nav-link">Resources</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="image-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=600&fit=crop" alt="Forest landscape">
+                        <div class="slide-overlay">
+                            <h2>Protect Our Forests</h2>
+                            <p>Every tree planted helps combat climate change</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1200&h=600&fit=crop" alt="Ocean waves">
+                        <div class="slide-overlay">
+                            <h2>Save Our Oceans</h2>
+                            <p>Marine conservation protects 70% of our planet</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&h=600&fit=crop" alt="Mountain landscape">
+                        <div class="slide-overlay">
+                            <h2>Preserve Nature</h2>
+                            <p>Wildlife habitats need our protection now</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1540206395-68808572332f?w=1200&h=600&fit=crop" alt="Native plants">
+                        <div class="slide-overlay">
+                            <h2>Plant Native Species</h2>
+                            <p>Local plants support entire ecosystems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-pullup" id="hero-pullup">
+                <div class="pullup-arrow" id="pullup-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="pullup-content" id="pullup-content">
+                    <div class="hero-content">
+                        <h1>Make a Difference for Our Planet</h1>
+                        <p>Learn how you can help the environment through donations to trusted nonprofits and by planting native plants in your community.</p>
+                        <div class="hero-buttons">
+                            <a href="#donate" class="btn btn-primary">Support Organizations</a>
+                            <a href="#plants" class="btn btn-secondary">Plant Native Species</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="impact-section">
+            <div class="container">
+                <h2>Your Impact Matters</h2>
+                <div class="impact-cards">
+                    <div class="impact-card">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3>Support Conservation</h3>
+                        <p>Your donations help protect endangered species and preserve natural habitats worldwide.</p>
+                    </div>
+                    <div class="impact-card">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Restore Ecosystems</h3>
+                        <p>Native plants provide food and shelter for local wildlife while improving air and water quality.</p>
+                    </div>
+                    <div class="impact-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Build Community</h3>
+                        <p>Join millions of people working together to create a sustainable future for generations to come.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="donate" class="donate-section">
+            <div class="container">
+                <h2>Support Environmental Organizations</h2>
+                <p class="section-description">Choose from these trusted nonprofits working to protect our planet.</p>
+                
+                <div class="donation-calculator">
+                    <h3>Donation Impact Calculator</h3>
+                    <div class="calculator-inputs">
+                        <input type="number" id="donation-amount" placeholder="Enter donation amount ($)" min="1">
+                        <select id="donation-type">
+                            <option value="trees">Plant Trees</option>
+                            <option value="ocean">Ocean Conservation</option>
+                            <option value="wildlife">Wildlife Protection</option>
+                            <option value="climate">Climate Action</option>
+                        </select>
+                    </div>
+                    <div id="impact-result" class="impact-result"></div>
+                </div>
+
+                <div class="organizations-grid">
+                    <div class="organization-card">
+                        <div class="org-logo">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <h3>One Tree Planted</h3>
+                        <p>Works with reforestation organizations around the world to plant trees and restore forests.</p>
+                        <div class="org-tags">
+                            <span class="tag">Reforestation</span>
+                            <span class="tag">Climate</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openDonationLink('https://onetreeplanted.org/')">Donate Now</button>
+                    </div>
+
+                    <div class="organization-card">
+                        <div class="org-logo">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h3>Ocean Conservancy</h3>
+                        <p>Protecting ocean ecosystems and marine life through science-based advocacy and public engagement.</p>
+                        <div class="org-tags">
+                            <span class="tag">Ocean</span>
+                            <span class="tag">Marine Life</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openDonationLink('https://oceanconservancy.org/')">Donate Now</button>
+                    </div>
+
+                    <div class="organization-card">
+                        <div class="org-logo">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <h3>World Wildlife Fund</h3>
+                        <p>Working to conserve nature and reduce the most pressing threats to the diversity of life on Earth.</p>
+                        <div class="org-tags">
+                            <span class="tag">Wildlife</span>
+                            <span class="tag">Conservation</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openDonationLink('https://www.worldwildlife.org/')">Donate Now</button>
+                    </div>
+
+                    <div class="organization-card">
+                        <div class="org-logo">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <h3>350.org</h3>
+                        <p>Building a global climate movement to hold leaders accountable and transition to renewable energy.</p>
+                        <div class="org-tags">
+                            <span class="tag">Climate</span>
+                            <span class="tag">Energy</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openDonationLink('https://350.org/')">Donate Now</button>
+                    </div>
+
+                    <div class="organization-card">
+                        <div class="org-logo">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>The Nature Conservancy</h3>
+                        <p>Protecting lands and waters throughout the world for nature and people.</p>
+                        <div class="org-tags">
+                            <span class="tag">Land</span>
+                            <span class="tag">Water</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openDonationLink('https://www.nature.org/')">Donate Now</button>
+                    </div>
+
+                    <div class="organization-card">
+                        <div class="org-logo">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3>National Geographic Society</h3>
+                        <p>Using the power of science, exploration, and storytelling to illuminate and protect the wonders of our world.</p>
+                        <div class="org-tags">
+                            <span class="tag">Research</span>
+                            <span class="tag">Education</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openDonationLink('https://www.nationalgeographic.org/')">Donate Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="plants" class="plants-section">
+            <div class="container">
+                <h2>Plant Native Species</h2>
+                <p class="section-description">Native plants support local ecosystems and require less maintenance. Find the right plants for your region.</p>
+                
+                <div class="plant-finder">
+                    <h3>Native Plant Finder</h3>
+                    <div class="finder-controls">
+                        <select id="region-select">
+                            <option value="">Select Your Region</option>
+                            <option value="northeast">Northeast</option>
+                            <option value="southeast">Southeast</option>
+                            <option value="midwest">Midwest</option>
+                            <option value="southwest">Southwest</option>
+                            <option value="west">West</option>
+                            <option value="northwest">Northwest</option>
+                        </select>
+                        <select id="plant-type">
+                            <option value="">Plant Type</option>
+                            <option value="wildflowers">Wildflowers</option>
+                            <option value="grasses">Grasses</option>
+                            <option value="shrubs">Shrubs</option>
+                            <option value="trees">Trees</option>
+                        </select>
+                        <select id="sun-requirements">
+                            <option value="">Sun Requirements</option>
+                            <option value="full-sun">Full Sun</option>
+                            <option value="partial-shade">Partial Shade</option>
+                            <option value="full-shade">Full Shade</option>
+                        </select>
+                        <button class="btn btn-primary" onclick="findPlants()">Find Plants</button>
+                    </div>
+                </div>
+
+                <div id="plants-results" class="plants-grid">
+                    <!-- Plants will be dynamically loaded here -->
+                </div>
+
+                <div class="benefits-section">
+                    <h3>Benefits of Native Plants</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <i class="fas fa-butterfly"></i>
+                            <h4>Support Pollinators</h4>
+                            <p>Native plants provide essential food and habitat for bees, butterflies, and other pollinators.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-tint"></i>
+                            <h4>Conserve Water</h4>
+                            <p>Once established, native plants typically require less water than non-native species.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-cut"></i>
+                            <h4>Low Maintenance</h4>
+                            <p>Native plants are adapted to local conditions and require less fertilizer and pesticides.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-home"></i>
+                            <h4>Wildlife Habitat</h4>
+                            <p>Provide shelter and food for birds, insects, and other local wildlife.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="resources-section">
+            <div class="container">
+                <h2>Educational Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Guides & Articles</h3>
+                        <ul>
+                            <li><a href="#">Beginner's Guide to Native Planting</a></li>
+                            <li><a href="#">How to Choose Environmental Organizations</a></li>
+                            <li><a href="#">Creating a Wildlife-Friendly Garden</a></li>
+                            <li><a href="#">Understanding Carbon Footprints</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-video"></i>
+                        <h3>Videos & Tutorials</h3>
+                        <ul>
+                            <li><a href="#">Planting Native Trees Tutorial</a></li>
+                            <li><a href="#">Composting for Beginners</a></li>
+                            <li><a href="#">Rain Garden Installation Guide</a></li>
+                            <li><a href="#">Wildlife Photography Tips</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools & Apps</h3>
+                        <ul>
+                            <li><a href="#">Plant Identification Apps</a></li>
+                            <li><a href="#">Carbon Footprint Calculators</a></li>
+                            <li><a href="#">Garden Planning Tools</a></li>
+                            <li><a href="#">Environmental Impact Trackers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>EcoAction</h4>
+                    <p>Empowering individuals to make a positive impact on the environment through education and action.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#donate">Donate</a></li>
+                        <li><a href="#plants">Native Plants</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EcoAction. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
