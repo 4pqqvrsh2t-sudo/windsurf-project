@@ -584,9 +584,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add scroll effect to header
+// Scroll behavior for hero section
+let lastScrollY = 0;
+const hero = document.querySelector('.hero');
+const header = document.querySelector('.header');
+
 window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header');
+    const currentScrollY = window.scrollY;
+    
+    // Hide/show hero based on scroll direction
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down - hide hero
+        hero.classList.add('scrolled-down');
+    } else {
+        // Scrolling up - show hero
+        hero.classList.remove('scrolled-down');
+    }
+    
+    lastScrollY = currentScrollY;
+    
+    // Header scroll effect
     if (window.scrollY > 100) {
         header.style.background = 'rgba(245, 245, 240, 0.98)';
         header.style.boxShadow = '0 2px 30px rgba(45, 62, 47, 0.15)';
