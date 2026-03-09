@@ -130,7 +130,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1em;
-    animation: spin 10s linear infinite;
+    animation: spin 4s infinite linear;
     padding-right: 1em;
 }
 .card {
