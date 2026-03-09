@@ -26,35 +26,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Pull-up functionality
-const pullupArrow = document.getElementById('pullup-arrow');
-const pullupContent = document.getElementById('pullup-content');
-const heroPullup = document.getElementById('hero-pullup');
-let isPullupOpen = false;
-
-pullupArrow.addEventListener('click', () => {
-    isPullupOpen = !isPullupOpen;
-    
-    if (isPullupOpen) {
-        pullupContent.classList.add('active');
-        pullupArrow.classList.add('active');
-        heroPullup.style.transform = 'translateY(-300px)';
-    } else {
-        pullupContent.classList.remove('active');
-        pullupArrow.classList.remove('active');
-        heroPullup.style.transform = 'translateY(0)';
-    }
-});
-
-// Show arrow when scrolled to top
-window.addEventListener('scroll', () => {
-    if (window.scrollY < 50 && !isPullupOpen) {
-        pullupArrow.style.opacity = '1';
-    } else {
-        pullupArrow.style.opacity = '0';
-    }
-});
-
 // Donation Impact Calculator
 const donationAmount = document.getElementById('donation-amount');
 const donationType = document.getElementById('donation-type');
