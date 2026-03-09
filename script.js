@@ -12,39 +12,6 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
     navMenu.classList.remove('active');
 }));
 
-// Image Carousel
-const carouselContainer = document.querySelector('.carousel-container');
-const slides = document.querySelectorAll('.carousel-slide');
-let currentSlide = 0;
-let slideInterval;
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    updateCarousel();
-}
-
-function updateCarousel() {
-    const offset = -currentSlide * 100;
-    carouselContainer.style.transform = `translateX(${offset}%)`;
-}
-
-function startCarousel() {
-    slideInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
-}
-
-function stopCarousel() {
-    clearInterval(slideInterval);
-}
-
-// Start carousel on page load
-document.addEventListener('DOMContentLoaded', () => {
-    startCarousel();
-    
-    // Pause carousel on hover
-    carouselContainer.addEventListener('mouseenter', stopCarousel);
-    carouselContainer.addEventListener('mouseleave', startCarousel);
-});
-
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
